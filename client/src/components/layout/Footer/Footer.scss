@@ -1,0 +1,59 @@
+@import "../../../styles/settings.scss";
+
+.main_footer_container {
+  width: 100%;
+  height: auto;
+  background-color: $black;
+  display: flex;
+  margin-top: 100px;
+}
+
+.footer_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: $white;
+    position: relative;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-family: $title_font;
+    flex: 2;
+  }
+  h3::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: $gold;
+  }
+  .social_media_icons {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+}
+
+.footer_column .header_link {
+  color: $white;
+}
+
+.social_media_icons a svg {
+  font-size: 34px;
+}
+
+@media (max-width: 1023px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
